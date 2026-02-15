@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { colors, fontSize, spacing } from '../../src/theme';
 
 // Simple icon components using shapes
-function HomeIcon({ focused }: { focused: boolean }) (
+const HomeIcon = ({ focused }: { focused: boolean }) => (
   <View style={[styles.iconContainer, focused && styles.iconFocused]}>
     <View style={styles.homeIcon}>
       <View style={styles.homeRoof} />
@@ -12,14 +12,14 @@ function HomeIcon({ focused }: { focused: boolean }) (
   </View>
 );
 
-function SearchIcon({ focused }: { focused: boolean }) (
+const SearchIcon = ({ focused }: { focused: boolean }) => (
   <View style={[styles.iconContainer, focused && styles.iconFocused]}>
     <View style={styles.searchCircle} />
     <View style={styles.searchHandle} />
   </View>
 );
 
-function PlusIcon() (
+const PlusIcon = () => (
   <View style={styles.plusContainer}>
     <View style={styles.plusHorizontal} />
     <View style={styles.plusVertical} />

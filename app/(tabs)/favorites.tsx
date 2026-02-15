@@ -1,5 +1,5 @@
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useRouter, useFocusEffect } from 'expo-router';
 import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { colors, spacing, radius, fontSize, fontWeight, shadows } from '../../src/theme';
@@ -34,11 +34,9 @@ export default function FavoritesScreen() {
     }
   };
 
-  useEffect(() => {
+  useFocusEffect(() => {
     loadFavorites();
-    const unsubscribe = router.on('focus', loadFavorites);
-    return unsubscribe;
-  }, [router]);
+  });
 
   const renderRecipe = ({ item }: { item: Recipe }) => (
     <TouchableOpacity

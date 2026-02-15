@@ -2,7 +2,7 @@ import { colors, spacing, radius, fontSize, fontWeight } from '../theme';
 
 export interface CardProps {
   children: React.ReactNode;
-  style?: object;
+  style?: React.CSSProperties;
 }
 
 export function Card({ children, style }: CardProps) {
@@ -25,7 +25,7 @@ export interface ButtonProps {
   onPress: () => void;
   variant?: 'primary' | 'secondary' | 'ghost';
   disabled?: boolean;
-  style?: object;
+  style?: React.CSSProperties;
 }
 
 export function Button({ title, onPress, variant = 'primary', disabled, style }: ButtonProps) {
@@ -50,8 +50,10 @@ export function Button({ title, onPress, variant = 'primary', disabled, style }:
       disabled={disabled}
       style={{
         ...buttonStyle,
-        paddingHorizontal: spacing.lg,
-        paddingVertical: spacing.md,
+        paddingLeft: spacing.lg,
+        paddingRight: spacing.lg,
+        paddingTop: spacing.md,
+        paddingBottom: spacing.md,
         borderRadius: radius.md,
         fontSize: fontSize.bodyLarge,
         fontWeight: fontWeight.semibold,
