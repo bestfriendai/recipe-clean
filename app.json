@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "RecipeClean",
+    "slug": "recipe-clean",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF6B5B"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.recipeclean.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF6B5B"
+      },
+      "package": "com.recipeclean.app"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "root": "./app"
+        }
+      ]
+    ]
+  }
+}
